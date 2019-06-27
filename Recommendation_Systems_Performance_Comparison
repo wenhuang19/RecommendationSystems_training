@@ -1,0 +1,93 @@
+RMSE:      Root Mean Squared Error. Lower values mean better accuracy.
+MAE:       Mean Absolute Error. Lower values mean better accuracy.
+HR:        Hit Rate; how often we are able to recommend a left-out rating. Higher is better.
+cHR:       Cumulative Hit Rate; hit rate, confined to ratings above a certain threshold. Higher is better.
+ARHR:      Average Reciprocal Hit Rank - Hit rate that takes the ranking into account. Higher is better.
+Coverage:  Ratio of users for whom recommendations above a certain threshold exist. Higher is better.
+Diversity: 1-S, where S is the average similarity score between every possible pair of recommendations
+           for a given user. Higher means more diverse.
+Novelty:   Average popularity rank of recommended items. Higher means more novel.
+
+
+Algorithm  RMSE       MAE       
+ContentKNN 0.9350     0.7246    
+
+Algorithm  RMSE       MAE        HR         cHR        ARHR       Coverage   Diversity  Novelty   
+RBM        1.1911     0.9949     0.0030     0.0030     0.0022     0.0000     0.0180     919.2990  
+Random     1.4446     1.1535     0.0149     0.0149     0.0032     1.0000     0.0686     534.8926  
+
+Algorithm  RMSE       MAE        HR         cHR        ARHR       Coverage   Diversity  Novelty   
+AutoRec    1.7671     1.3677     0.0045     0.0045     0.0017     1.0000     0.0770     573.0978  
+Random     1.4331     1.1430     0.0179     0.0179     0.0058     1.0000     0.0682     538.2634  
+
+Algorithm  RMSE       MAE       
+SVD        0.9013     0.6971    
+SVD++      0.8901     0.6863    
+Random     1.4385     1.1488    
+
+
+Movie Recommendation for Wen:
+
+KNNContent
+
+Sleepers (1996) 5
+Cape Fear (1991) 5
+Seven (a.k.a. Se7en) (1995) 5
+Fugitive, The (1993) 5
+In the Line of Fire (1993) 5
+Stir of Echoes (1999) 5
+Believers, The (1987) 5
+Jaws (1975) 5
+Jaws 2 (1978) 5
+Poltergeist (1982) 5
+
+Random
+Dracula (Bram Stoker's Dracula) (1992) 5
+Wolf (1994) 5
+Addams Family Values (1993) 5
+Englishman Who Went Up a Hill But Came Down a Mountain, The (1995) 5
+Sirens (1994) 5
+Silence of the Lambs, The (1991) 5
+James and the Giant Peach (1996) 5
+Heavenly Creatures (1994) 5
+Harold and Maude (1971) 5
+Encino Man (1992) 5
+
+Autorec
+
+Circle of Friends (1995) 5
+Rocketeer, The (1991) 5
+Pretty Woman (1990) 5
+Rob Roy (1995) 5
+Thin Red Line, The (1998) 5
+October Sky (1999) 5
+Kingpin (1996) 5
+Leaving Las Vegas (1995) 5
+Big Sleep, The (1946) 5
+Affliction (1997) 5
+
+SVD
+
+12 Angry Men (1957) 4.795639042464293
+Modern Times (1936) 4.697094613612051
+All About Eve (1950) 4.696640993239741
+It Happened One Night (1934) 4.592501011559032
+Shawshank Redemption, The (1994) 4.579347508645781
+Blood Simple (1984) 4.574099160716824
+Some Like It Hot (1959) 4.563054993047864
+African Queen, The (1951) 4.5609509751667
+Godfather, The (1972) 4.55617780601277
+Pianist, The (2002) 4.53803564586552
+
+SVD++
+
+Shawshank Redemption, The (1994) 4.762169238942218
+Wallace & Gromit: A Close Shave (1995) 4.689957614070731
+Modern Times (1936) 4.669726766390057
+Godfather, The (1972) 4.6689841164006
+African Queen, The (1951) 4.645026661580715
+Usual Suspects, The (1995) 4.640416197599413
+All About Eve (1950) 4.63991209306363
+Amadeus (1984) 4.609123913891207
+Wallace & Gromit: The Wrong Trousers (1993) 4.600077020804391
+Band of Brothers (2001) 4.592019206740154
